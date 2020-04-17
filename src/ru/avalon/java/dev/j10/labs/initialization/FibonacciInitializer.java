@@ -27,6 +27,16 @@ public class FibonacciInitializer implements Initializer {
      * @param array массив, подлежащий инициализации
      */
     public void initialize(int[] array) {
+        if (array.length > 1) {
+            array[0] = 0;
+            array[1] = 1;
+            
+            for(int i = 2; i < array.length; i++) {
+                array[i] = array[i - 1] + array[i - 2];
+            }
+        } else
+            System.out.println("Маловато для массива");
+        
         /*
          * TODO(Студент): Реализовать метод initialize класса FibonacciInitializer
          */
